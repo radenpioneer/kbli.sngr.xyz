@@ -1,9 +1,14 @@
 import { config, fields, collection } from '@keystatic/core'
 
 export default config({
-  storage: {
-    kind: 'local'
-  },
+  storage: import.meta.env.DEV
+    ? {
+        kind: 'local'
+      }
+    : {
+        kind: 'github',
+        repo: 'radenpioneer/kbli.sngr.xyz'
+      },
   collections: {
     posts: collection({
       label: 'Posts',
