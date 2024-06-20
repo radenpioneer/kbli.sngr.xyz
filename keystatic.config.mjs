@@ -6,18 +6,19 @@ export default config({
   },
   collections: {
     posts: collection({
-      label: 'Posts',
-      slugField: 'title',
-      path: 'src/content/posts/*',
-      format: { contentField: 'content' },
+      label: 'Entry',
+      slugField: 'code',
+      path: 'src/content/entries/*',
+      format: { contentField: 'description' },
       schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
-        content: fields.markdoc({
-          label: 'Content',
+        code: fields.slug({ name: { label: 'Code', required: true } }),
+        name: fields.text({ label: 'Name', required: true }),
+        description: fields.markdoc({
+          label: 'Description',
           options: {
             image: {
-              directory: 'src/assets/images/posts',
-              publicPath: '../../assets/images/posts/'
+              directory: 'src/assets/entries',
+              publicPath: '../../assets/entries/'
             }
           }
         })
