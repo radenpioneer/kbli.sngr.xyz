@@ -175,8 +175,8 @@
   // astro.config.mjs
 
   export default defineConfig({
-    output: 'server',
-  });
+    output: 'server'
+  })
   ```
 
 - Updated dependencies [6a60ab3c]

@@ -1,8 +1,8 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection } from '@keystatic/core'
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: 'local'
   },
   collections: {
     posts: collection({
@@ -17,11 +17,11 @@ export default config({
           options: {
             image: {
               directory: 'src/assets/images/posts',
-              publicPath: '../../assets/images/posts/',
-            },
-          },
-        }),
-      },
-    }),
-  },
-});
+              publicPath: '../../assets/images/posts/'
+            }
+          }
+        })
+      }
+    })
+  }
+})
