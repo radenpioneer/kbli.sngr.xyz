@@ -1,0 +1,8 @@
+---
+import { Debug } from 'astro:components'
+import { getCollection } from 'astro:content'
+
+const entries = await getCollection('entries')
+---
+
+<Debug {entries} />
