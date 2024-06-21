@@ -2,3 +2,11 @@ vscode:
   extensions:
     - astro-build.astro-vscode
     - sourcegraph.cody-ai
+
+tasks:
+  - init: |
+      echo 'KEYSTATIC=true' > .env
+      echo 'Run the following commands to start dev server:'
+      echo '1. corepack enable'
+      echo '2. pnpm install' 
+      echo '3. pnpm run dev'

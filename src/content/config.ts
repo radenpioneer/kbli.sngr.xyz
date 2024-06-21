@@ -7,7 +7,13 @@ export const collections = {
     schema: z.object({
       code: z.string(),
       name: z.string(),
-      type: z.string(),
+      type: z.nativeEnum({
+        kategori: 'kategori',
+        'golongan-utama': 'golongan-utama',
+        golongan: 'golongan',
+        subgolongan: 'subgolongan',
+        kelompok: 'kelompok'
+      }),
       induk: z.string().optional()
     })
   }),
