@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config'
 import { loadEnv } from 'vite'
+import htmx from 'astro-htmx'
+import alpinejs from '@astrojs/alpinejs'
 import react from '@astrojs/react'
 import markdoc from '@astrojs/markdoc'
 import keystatic from '@keystatic/astro'
@@ -9,7 +11,13 @@ const { KEYSTATIC } = loadEnv(process.env.NODE_ENV, process.cwd(), '')
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), markdoc(), ...(KEYSTATIC ? [keystatic()] : [])],
+  integrations: [
+    htmx(),
+    alpinejs(),
+    react(),
+    markdoc(),
+    ...(KEYSTATIC ? [keystatic()] : [])
+  ],
   output: 'hybrid',
   adapter: cloudflare()
 })

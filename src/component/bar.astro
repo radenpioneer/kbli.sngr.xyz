@@ -1,0 +1,14 @@
+---
+const placeholder = 'Cari Kode KBLI'
+---
+
+<input
+  type='search'
+  name='q'
+  placeholder={placeholder}
+  x-data="{query: ''}"
+  x-model='query'
+  x-bind:hx-get="'/search?' + query"
+  hx-trigger='input changed delay:500ms, q'
+  hx-target='#result'
+/>

@@ -1,9 +1,13 @@
 ---
 import Layout from '../layouts/layout.astro'
-
-const title = 'kbli.sngr.xyz'
+import SearchBar from '../component/bar.astro'
 ---
 
 <Layout>
-  <h1>{title}</h1>
+  <main>
+    <section>
+      <SearchBar />
+    </section>
+    <section id='result'></section>
+  </main>
 </Layout>

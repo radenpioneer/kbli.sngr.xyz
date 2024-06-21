@@ -2,7 +2,10 @@
 import { Debug } from 'astro:components'
 import { getCollection } from 'astro:content'
 
-const entries = await getCollection('entries', ({ data }) => data.type === 'kelompok')
+const entries = await getCollection(
+  'entries',
+  ({ data }) => data.type === 'kelompok'
+)
 ---
 
 <Debug {entries} />
