@@ -1,4 +1,4 @@
-import { config, fields, collection } from '@keystatic/core'
+import { config, fields, collection, singleton } from '@keystatic/core'
 
 export default config({
   storage: {
@@ -37,6 +37,22 @@ export default config({
               publicPath: '../../assets/entries/'
             }
           }
+        })
+      }
+    })
+  },
+
+  singletons: {
+    site: singleton({
+      label: 'Site',
+      path: 'src/content/site/site',
+      format: { data: 'json' },
+      schema: {
+        title: fields.text({ label: 'Title', required: true }),
+        description: fields.text({
+          label: 'Description',
+          multiline: true,
+          required: true
         })
       }
     })

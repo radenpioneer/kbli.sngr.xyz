@@ -10,5 +10,13 @@ export const collections = {
       type: z.string(),
       induk: z.string().optional()
     })
+  }),
+
+  site: defineCollection({
+    type: 'data',
+    schema: z.object({
+      title: z.string(),
+      description: z.string()
+    })
   })
 }
