@@ -11,8 +11,7 @@ const entries = await getCollection(
 const fuse = new Fuse(entries, {
   keys: ['data.code', 'data.name', 'body'],
   includeMatches: true,
-  minMatchCharLength: 2,
-  threshold: 0.5
+  minMatchCharLength: 2
 })
 
 const query = Astro.url.searchParams.get('q')
