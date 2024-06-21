@@ -1,0 +1,4 @@
+vscode:
+  extensions:
+    - astro-build.astro-vscode
+    - sourcegraph.cody-ai
