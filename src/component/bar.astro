@@ -2,13 +2,33 @@
 const placeholder = 'Cari Kode KBLI'
 ---
 
-<input
-  type='search'
-  name='q'
-  placeholder={placeholder}
-  x-data="{q: ''}"
-  x-model='q'
-  x-bind:hx-get="'/search?' + q"
-  hx-trigger='input changed delay:500ms, q'
-  hx-target='#result'
-/>
+<section
+  id='search'
+  x-data="{q: '', isTouched: false}"
+  x-bind:class="isTouched && 'touchedInput'"
+>
+  <input
+    type='search'
+    name='q'
+    placeholder={placeholder}
+    x-model='q'
+    x-on:input='isTouched = true; $dispatch("set-show", true)'
+    x-bind:hx-get="'/search?' + q"
+    hx-trigger='input changed delay:500ms, q'
+    hx-target='#result'
+  />
+</section>
+
+<style>
+  .touchedInput {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+</style>

@@ -21,4 +21,8 @@ const { title, description } = Astro.props
   @use '@picocss/pico/scss/pico' with (
     $theme-color: 'cyan'
   );
+
+  [x-cloak] {
+    display: none !important;
+  }
 </style>

@@ -7,4 +7,4 @@ tasks:
   - init: |
       npm i -g wrangler
       echo 'KEYSTATIC=true' > .env
-      echo 'Run the following commands to start dev server:\n1. corepack enable\n2. pnpm install\n3. pnpm run dev'
+      echo 'Run the following commands to start dev server: 1. corepack enable 2. pnpm install 3. pnpm run dev'
