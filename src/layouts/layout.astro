@@ -14,7 +14,11 @@ const { title, description } = Astro.props
   </Fragment>
 
   {/* <body /> */}
-  <Fragment>
-    <slot />
-  </Fragment>
+  <slot />
 </BaseLayout>
+
+<style lang='scss' is:global>
+  @use '@picocss/pico/scss/pico' with (
+    $theme-color: 'cyan'
+  );
+</style>

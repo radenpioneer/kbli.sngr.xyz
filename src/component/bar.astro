@@ -6,9 +6,9 @@ const placeholder = 'Cari Kode KBLI'
   type='search'
   name='q'
   placeholder={placeholder}
-  x-data="{query: ''}"
-  x-model='query'
-  x-bind:hx-get="'/search?' + query"
+  x-data="{q: ''}"
+  x-model='q'
+  x-bind:hx-get="'/search?' + q"
   hx-trigger='input changed delay:500ms, q'
   hx-target='#result'
 />
