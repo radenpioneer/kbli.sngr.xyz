@@ -7,8 +7,22 @@ export const collections = {
     schema: z.object({
       code: z.string(),
       name: z.string(),
-      type: z.string(),
+      type: z.nativeEnum({
+        kategori: 'kategori',
+        'golongan-utama': 'golongan-utama',
+        golongan: 'golongan',
+        subgolongan: 'subgolongan',
+        kelompok: 'kelompok'
+      }),
       induk: z.string().optional()
+    })
+  }),
+
+  site: defineCollection({
+    type: 'data',
+    schema: z.object({
+      title: z.string(),
+      description: z.string()
     })
   })
 }
