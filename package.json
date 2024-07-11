@@ -11,8 +11,9 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "astro": "^4.11.5",
     "@astrojs/check": "^0.8.1",
+    "@astrojs/cloudflare": "^11.0.1",
+    "astro": "^4.11.5",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
