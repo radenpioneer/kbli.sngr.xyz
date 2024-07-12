@@ -1,0 +1,4 @@
+[[d1_databases]]
+binding = "DB" # available in your Worker on env.DB
+database_name = "kbli-d1"
+database_id = "6b984b99-2542-4069-b4fb-2e73623f0a7c"

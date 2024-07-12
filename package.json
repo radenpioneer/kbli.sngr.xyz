@@ -1,34 +1,36 @@
 {
-  "name": "@keystatic/templates-astro",
-  "version": "0.0.34",
-  "license": "MIT",
+  "name": "kbli.sngr.xyz",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "check:format": "prettier --check .",
     "dev": "astro dev",
-    "format": "prettier --write .",
+    "start": "astro dev",
+    "build": "astro check && astro build",
     "preview": "astro preview",
-    "start": "astro dev"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.mjs",
+    "db:migrate": "drizzle-kit migrate --config=drizzle.config.mjs",
+    "db:studio": "drizzle-kit studio --config=drizzle.config.mjs"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "10.4.2",
-    "@astrojs/markdoc": "0.11.1",
-    "@astrojs/react": "3.6.0",
-    "@keystatic/astro": "5.0.0",
-    "@keystatic/core": "0.5.23",
-    "astro": "4.11.3",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/cloudflare": "^11.0.1",
+    "astro": "^4.11.5",
+    "drizzle-graphql": "^0.8.4",
+    "drizzle-orm": "^0.32.0",
+    "drizzle-zod": "^0.5.1",
+    "graphql": "^16.9.0",
+    "graphql-yoga": "^5.6.0",
+    "nanoid": "^5.0.7",
+    "typescript": "^5.5.3"
   },
   "devDependencies": {
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "prettier": "3.3.2",
-    "prettier-config-standard": "7.0.0",
-    "prettier-plugin-astro": "0.14.0",
-    "typescript": "5.5.2",
-    "vite": "5.3.2"
-  },
-  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+    "@cloudflare/workers-types": "^4.20240701.0",
+    "drizzle-kit": "^0.23.0",
+    "prettier": "^3.3.2",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  }
 }
