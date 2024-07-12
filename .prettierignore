@@ -1,5 +1,8 @@
 # build output
 dist/
+.wrangler/
+src/drizzle/migrations/*
+
 # generated types
 .astro/
 
