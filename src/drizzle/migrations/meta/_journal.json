@@ -8,6 +8,27 @@
       "when": 1720748464036,
       "tag": "0000_military_devos",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1720753787297,
+      "tag": "0001_broad_sheva_callister",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1720755709465,
+      "tag": "0002_magenta_living_mummy",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1720756534724,
+      "tag": "0003_wet_quicksilver",
+      "breakpoints": true
     }
   ]
 }

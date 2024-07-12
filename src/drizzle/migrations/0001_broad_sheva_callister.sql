@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `entry_code_unique` ON `entry` (`code`);
