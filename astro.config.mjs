@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import cloudflare from '@astrojs/cloudflare'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,5 +9,8 @@ export default defineConfig({
     platformProxy: {
       enabled: true
     }
-  })
+  }),
+  vite: {
+    plugins: [nodePolyfills()]
+  }
 })
